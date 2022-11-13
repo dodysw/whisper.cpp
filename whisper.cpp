@@ -2665,6 +2665,12 @@ int whisper_full(
                             fprintf(stderr, "\n%s: failed to generate timestamp token - this should not happen\n\n", __func__);
                         }
                     }
+
+                    // TODO: TMP TO MAKE STREAM WORK ON RPI4 ===
+                    result_len = i + 1;
+                    seek_delta = 100*WHISPER_CHUNK_SIZE;
+                    // =========================================
+
                     break;
                 }
 
